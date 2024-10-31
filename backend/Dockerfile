@@ -1,16 +1,19 @@
 # Use the official Python image
-FROM python:3.9-slim
+FROM python:3.9
 
 # Set the working directory
 WORKDIR /app
 
-# Copy backend code to the container
+# Copy all files from the current directory to the working directory in the container
 COPY . /app
 
-# Install FastAPI and Uvicorn
-RUN pip install -r requirements.txt
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port 8000 for the FastAPI app
+# Set PYTHONPATH to the working directory
+ENV PYTHONPATH=/app
+
+# Expose port for the FastAPI app
 EXPOSE 8000
 
 # Command to run the FastAPI app

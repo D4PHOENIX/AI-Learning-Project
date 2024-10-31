@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from backend.models.gemini_api import GeminiAPI
-from backend.models.chat_manager import ChatManager
+from models.gemini_api import GeminiAPI
+from models.chat_manager import ChatManager
 from pydantic import BaseModel
 
 router = APIRouter()

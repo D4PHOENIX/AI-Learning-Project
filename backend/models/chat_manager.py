@@ -1,10 +1,10 @@
-import logging
+# import logging
 from typing import List
-from backend.models.summarizer import Summarizer  
-from backend.utils.relevance import check_relevance  
+from models.summarizer import Summarizer  
+from utils.relevance import check_relevance  
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class ChatManager:
     def __init__(self, max_context_length=5, length_limit=500, relevance_threshold=0.5):
@@ -32,12 +32,12 @@ class ChatManager:
         # Summarize if the context exceeds the length limit
         if len(context) > self.length_limit:
             try:
-                logging.info("Context length exceeded, summarizing...")
+                # logging.info("Context length exceeded, summarizing...")
                 context = self.summarizer.summarize(context)
             except Exception as e:
-                logging.error(f"Error during summarization: {e}")
+                # logging.error(f"Error during summarization: {e}")
                 # Return the original context if summarization fails
                 return context
 
-        logging.info("Context successfully created and returned.")
+        # logging.info("Context successfully created and returned.")
         return context

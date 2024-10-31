@@ -10,6 +10,6 @@ def check_relevance(prompt: str, context: str, threshold=0.5) -> bool:
     similarity = cosine_similarity([vectors[0]], [vectors[1]])[0][0]
     
     end_time = time.time()  # End time for performance monitoring
-    logging.info(f"check_relevance execution time: {end_time - start_time:.4f} seconds")
+    # logging.info(f"check_relevance execution time: {end_time - start_time:.4f} seconds")
     
     return similarity > threshold
