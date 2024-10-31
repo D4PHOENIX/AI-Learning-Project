@@ -1,8 +1,7 @@
-# backend/main.py
 from fastapi import FastAPI
+from backend.routers import chatbot
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello, World!"}
+# Include chat API router
+app.include_router(chatbot.router)

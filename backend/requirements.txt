@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+requests
+transformers  
+scikit-learn
+google-generativeai
