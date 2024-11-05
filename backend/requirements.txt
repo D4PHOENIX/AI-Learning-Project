@@ -8,3 +8,4 @@ google-generativeai
 torch
 pydantic
 sentencepiece
+python-dotenv

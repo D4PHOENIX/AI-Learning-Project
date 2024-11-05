@@ -1,9 +1,9 @@
 import google.generativeai as genai
-import os
+from backend.utils import config
 
 class GeminiAPI:
     def __init__(self):
-        genai.configure(api_key=os.getenv("GENAI_API_KEY"))
+        genai.configure(api_key=config.config.GENAI_API_KEY)
         self.model = genai.GenerativeModel("gemini-1.5-flash")
         self.chat = self.model.start_chat(
             history=[
