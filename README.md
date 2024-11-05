@@ -71,7 +71,7 @@ If you prefer to run the application without Docker:
 
 Once the application is running, navigate to http://localhost:7860 for local deployment or visit the live app on Hugging Face Spaces.
 
-### 1.**Chatbot**
+### 1.**Chatbot**:
 
 The Chatbot interface allows users to interact with an AI-powered chatbot that maintains conversation history for a natural conversational flow.
 
@@ -84,7 +84,7 @@ The Chatbot interface allows users to interact with an AI-powered chatbot that m
 * Ask Chatbot: Sends the question to the chatbot.
 * Clear Chat History: Resets the chat history.
 
-### 2.**Quiz Generator**
+### 2.**Quiz Generator**:
 
 The Quiz Generator creates multiple-choice questions based on the provided text.
 
@@ -97,7 +97,7 @@ The Quiz Generator creates multiple-choice questions based on the provided text.
 **Button:**
 * Generate Quiz: Generates quiz questions based on the input text.
 
-### 3.**Summarizer**
+### 3.**Summarizer**:
 
 The Summarizer creates concise summaries based on input text.
 
@@ -127,7 +127,7 @@ To deploy on your own server or local setup:
 
 ---
 
-## API Endpoints
+## **API Endpoints**
 Here’s a quick reference to the main API endpoints:
 - /chat (POST): Accepts a user message and returns the chatbot's response.
 - /chat/history (GET): Retrieves the chat history.
@@ -138,10 +138,10 @@ For API documentation, visit http://localhost:8000/docs when the backend is runn
 
 ---
 
-## Screenshots
+## **Screenshots**
 (Include screenshots or a GIF of the application in action here)
 
 ---
 
-## License
+## **License**
 This project is licensed under the MIT License.
