@@ -1,20 +1,25 @@
-version: "3.9"
+version: '3.8'
 
 services:
   backend:
     build:
-      context: .
-      dockerfile: backend/Dockerfile
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
     ports:
       - "8000:8000"
-    volumes:
-      - ./backend:/app
+    environment:
+      - BACKEND_URL=http://backend:8000
+      - GENAI_API_KEY=AIzaSyCGD4ozxanCzbpgZ6ejnV8bed-Ih9EtReU
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    container_name: frontend
     ports:
-      - "3000:3000"
-    volumes:
-      - ./frontend:/app
+      - "7860:7860"
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend  
