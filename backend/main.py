@@ -1,19 +1,27 @@
-# backend/main.py
-
 from fastapi import FastAPI
-from routers import chatbot  # Import your chatbot router
+from fastapi.middleware.cors import CORSMiddleware
+from routers import api_endpoints
+from utils import config
+import os
 
 app = FastAPI()
 
-# Include the chatbot router for handling chatbot-related routes
-app.include_router(chatbot.router)
+# CORS setup
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[os.getenv("FRONTEND_URL")], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-# Test endpoint
+# Include the router for API endpoints
+app.include_router(api_endpoints.router)
+
 @app.get("/")
 async def root():
     return {"message": "FastAPI is running!"}
 
-# You can also create a health check endpoint
 @app.get("/health")
 async def health_check():
     return {"status": "ok"}

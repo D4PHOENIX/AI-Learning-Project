@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+transformers
+numpy
+scikit-learn
+google-generativeai
+torch
+pydantic
+sentencepiece
