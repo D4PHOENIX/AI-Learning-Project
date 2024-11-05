@@ -41,26 +41,27 @@ WiseUp AI provides an intuitive interface for interacting with NLP capabilities,
 ## **Getting Started**
 
 ### **Docker Setup**
+Ensure Docker is installed and running on your machine. We will use Docker Compose to build and start both the frontend and backend.
 
-  Ensure Docker is installed and running on your machine. We will use Docker Compose to build and start both the frontend and backend.
-
-    ```bash
     docker-compose up --build
-
+    
 ### **Local Environment (Non-Docker)**
 If you prefer to run the application without Docker:
 
 1. **Set up a virtual environment**:
+
     ```bash
     python3 -m venv env
     source env/bin/activate  # On Windows, use `env\Scripts\activate`
+    
 2. **Install Dependencies**:
-   ```bash
-   pip install -r backend/requirements.txt
+
+    ```bash
+    pip install -r backend/requirements.txt
 
 ### **Environment Variables**
-Define environment variables to configure the application. Create a ```.env``` file in the project’s root directory with the following:
-    ```bash
+  Define environment variables to configure the application. Create a .env file in the project’s root directory with the following:
+
     BACKEND_URL=<Backend URL>  # Example: http://localhost:8000
     FRONTEND_URL=<Frontend URL> # Example: http://localhost:7860
 
